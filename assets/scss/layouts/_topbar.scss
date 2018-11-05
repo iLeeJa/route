@@ -1,0 +1,124 @@
+// //////////////////////////////////////////////////////////////////////////////////////////////////
+// ==================================================================================================
+//
+// Topbar
+//
+// ==================================================================================================
+// //////////////////////////////////////////////////////////////////////////////////////////////////
+
+// Mixins
+@mixin topbar-variant (
+  $topbar-margin: 0 auto,
+  $topbar-padding: 0,
+  $topbar-liststyle: none,
+
+  // Border
+  $topbar-border: 1px solid $color-blue-1,
+  $topbar-border-radius: $border-radius-lg,
+) {
+  margin: $topbar-margin;
+  padding: $topbar-padding;
+  list-style: $topbar-liststyle;
+  border: $topbar-border;
+  border-radius: $topbar-border-radius;
+}
+
+.top-bar {
+  // Mixins
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // Helpers
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // Parent styles
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // Child element styles
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // States
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // Modifiers
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // States with modifiers
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // Media queries
+  // >>>>>>>>>>>>>>>>>>>>>>>
+}
+
+.top-bar-menu {
+  // Mixins
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // Helpers
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // Parent styles
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // Child element styles
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // States
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // Modifiers
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // States with modifiers
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // Media queries
+  // >>>>>>>>>>>>>>>>>>>>>>>
+  @media (min-width: $breakpoint-mobile-md)
+  and (max-width: $breakpoint-phablet-md) {
+    ul {
+      @include topbar-variant();
+   		text-align: center;
+      width: $field-width-default;
+      margin: 20px auto;
+      li {
+        display: inline-block;
+        a {
+          display: block;
+          padding: 6px 12px;
+          text-decoration: none;
+          color: $color-white-1;
+          
+          &:hover {
+            color: $color-blue-2;
+          }
+          
+          &.active {
+            color: $color-blue-1;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+
+}
+
+// Browser variations
+// >>>>>>>>>>>>>>>>>>>>>>>
+// IE 10-11
+.ie {}
+
+// Edge
+.edge {}
+
+// Safari mac
+.safari {}
+
+// Firefox
+.firefox {}
+
+// Safari iPhone/iPad
+.safari-mobile {}
+
+// Chrome Android
+.chrome-mobile {}

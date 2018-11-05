@@ -1,0 +1,267 @@
+// //////////////////////////////////////////////////////////////////////////////////////////////////
+// ==================================================================================================
+//
+// Route
+// * Structure & Detail
+// * Mixins
+// * Contextual variations
+//   - Default
+//   - Primary
+// ==================================================================================================
+// //////////////////////////////////////////////////////////////////////////////////////////////////
+
+@charset 'utf-8';
+
+// Structure & Detail
+// ============================================================
+/*
+<div class="card">
+  <div class="card-header">
+    <div class="card-image">
+      <div class="media-16-9">
+        <img src="./assets/images/contents/home-banner.jpg" alt="Cover">
+      </div>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-title">
+      <h2>Japanese Nadeshiko</h2>
+    </div>
+    <div class="card-description">
+      <p>a japanese term used to praise the unadorned, clean beauty of a japanese woman</p>
+    </div>
+  </div>
+  <div class="card-footer">
+    <div class="card-button">
+      <a class="button-primary" href="#" target="_blank">
+        <span class="button-body">
+          <span class="button-text">See detail</span>
+        </span>
+      </a>
+    </div>
+  </div>
+</div>
+*/
+
+// Mixins
+// ============================================================
+@mixin route-variant(
+  $route-background-color: transparent,
+  $route-border-radius: 0,
+  $route-box-shadow: none,
+
+  // Header
+  $route-header-padding: 0,
+  $route-header-spacing-bottom: 15px,
+
+  // Body
+  $route-body-padding: 0,
+  $route-body-spacing-bottom: 20px,
+
+  // Footer
+  $route-footer-padding: 0,
+  $route-footer-alignment-horozontal: flex-start,
+
+  // Image
+  $route-image-spacing-bottom: 0,
+
+  // Title
+  $route-title-spacing-bottom: 10px,
+  $route-title-text-style: $text-style-primary-heading-xs-bold,
+  $route-title-text-color: $color-gray-4,
+
+  // Description
+  $route-description-spacing-bottom: 0,
+  $route-description-text-style: $text-style-primary-body-sm,
+  $route-description-text-color: $color-gray-4
+) {
+  // Mixins
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // Helpers
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // Parent styles
+  // >>>>>>>>>>>>>>>>>>>>>>>
+  background-color: $route-background-color;
+  border-radius: $route-border-radius;
+  box-shadow: $route-box-shadow;
+
+  // Child element styles
+  // >>>>>>>>>>>>>>>>>>>>>>>
+  .route-header {
+    padding: $route-header-padding;
+    margin-bottom: $route-header-spacing-bottom;
+  }
+
+  .route-body {
+    padding: $route-body-padding;
+    margin-bottom: $route-body-spacing-bottom;
+  }
+
+  .route-footer {
+    display: flex;
+    justify-content: $route-footer-alignment-horozontal;
+    padding: $route-footer-padding;
+  }
+
+  .route-image {
+    margin-bottom: $route-image-spacing-bottom;
+  }
+
+  .route-title {
+    margin-bottom: $route-title-spacing-bottom;
+
+    * {
+      @extend #{$route-title-text-style};
+      color: $route-title-text-color;
+    }
+  }
+
+  .route-description {
+    margin-bottom: $route-description-spacing-bottom;
+
+    * {
+      @extend #{$route-description-text-style};
+      color: $route-description-text-color;
+    }
+  }
+
+  .route-button {
+    display: inline-block;
+  }
+
+  // States
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // Modifiers
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // States with modifiers
+  // >>>>>>>>>>>>>>>>>>>>>>>
+}
+
+// Browser variations
+// >>>>>>>>>>>>>>>>>>>>>>>
+// IE 10-11
+.ie {}
+
+// Edge
+.edge {}
+
+// Safari mac
+.safari {}
+
+// Firefox
+.firefox {}
+
+// Safari iPhone/iPad
+.safari-mobile {}
+
+// Chrome Android
+.chrome-mobile {}
+
+// Contextual variations
+// ============================================================
+
+// Default
+// ------------------------------------------------
+.route {
+  // Mixins
+  // >>>>>>>>>>>>>>>>>>>>>>>
+  @include route-variant();
+
+  // Helpers
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // Parent styles
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // Child element styles
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // States
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // Modifiers
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // States with modifiers
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // Media queries
+  // >>>>>>>>>>>>>>>>>>>>>>>
+}
+
+.route-profile {
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    color: $color-white-1;
+    li {
+      display: inline-block;
+    &:first-child {
+      margin-right: -10px;
+      position: relative;
+      z-index: 3;
+    }
+    &:nth-child(2) {
+      margin-right: -10px;
+      position: relative;
+      z-index: 2;
+    }
+    &:nth-child(3) {
+      position: relative;
+      z-index: 1;
+    }
+      a {
+        display: block;
+        padding: 6px 12px;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+// Browser variations
+// >>>>>>>>>>>>>>>>>>>>>>>
+// IE 10-11
+.ie {}
+
+// Edge
+.edge {}
+
+// Safari mac
+.safari {}
+
+// Firefox
+.firefox {}
+
+// Safari iPhone/iPad
+.safari-mobile {}
+
+// Chrome Android
+.chrome-mobile {}
+
+
+
+// Browser variations
+// >>>>>>>>>>>>>>>>>>>>>>>
+// IE 10-11
+.ie {}
+
+// Edge
+.edge {}
+
+// Safari mac
+.safari {}
+
+// Firefox
+.firefox {}
+
+// Safari iPhone/iPad
+.safari-mobile {}
+
+// Chrome Android
+.chrome-mobile {}

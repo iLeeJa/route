@@ -1,0 +1,121 @@
+// //////////////////////////////////////////////////////////////////////////////////////////////////
+// ==================================================================================================
+//
+// Topbar
+//
+// ==================================================================================================
+// //////////////////////////////////////////////////////////////////////////////////////////////////
+
+// Mixins
+@mixin footer-variant (
+  $footer-margin: 0 auto,
+  $footer-padding: 0,
+  $footer-liststyle: none,
+
+  // Border
+  $footer-border: 1px solid $color-blue-1,
+) {
+  margin: $footer-margin;
+  padding: $footer-padding;
+  list-style: $footer-liststyle;
+}
+
+.footer {
+  // Mixins
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // Helpers
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // Parent styles
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // Child element styles
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // States
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // Modifiers
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // States with modifiers
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // Media queries
+  // >>>>>>>>>>>>>>>>>>>>>>>
+}
+
+.footer-menu {
+  // Mixins
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // Helpers
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // Parent styles
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // Child element styles
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // States
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // Modifiers
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // States with modifiers
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // Media queries
+  // >>>>>>>>>>>>>>>>>>>>>>>
+  @media (min-width: $breakpoint-mobile-md)
+  and (max-width: $breakpoint-phablet-md) {
+    ul {
+      @include footer-variant();
+      text-align: center;
+      font-size: 30px;
+        li {
+          display: inline-block;
+          padding: 0 30px;
+            a {
+            display: block;
+            padding: 6px 10px;
+            color: $color-white-1;
+            text-decoration: none;
+          
+            &:hover {
+              color: $color-blue-2;
+            }
+          
+            &.active {
+              color: $color-blue-1;
+              border-bottom: 1px solid $color-blue-1;
+            }
+          }
+        } 
+    }
+  }
+
+}
+
+// Browser variations
+// >>>>>>>>>>>>>>>>>>>>>>>
+// IE 10-11
+.ie {}
+
+// Edge
+.edge {}
+
+// Safari mac
+.safari {}
+
+// Firefox
+.firefox {}
+
+// Safari iPhone/iPad
+.safari-mobile {}
+
+// Chrome Android
+.chrome-mobile {}
